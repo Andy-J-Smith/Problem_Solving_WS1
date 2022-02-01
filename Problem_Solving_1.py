@@ -1,6 +1,7 @@
 # Write code that takes a string as input and returns the string reversed
 
 from itertools import count
+from re import S
 from turtle import title
 
 
@@ -29,11 +30,11 @@ def proper_case():
         else:
             proper_sentence += input_sentence[word]
 
-        print(input_sentence[word])
+       
     return proper_sentence
 
-# result1 = proper_case()
-# print(result1)
+result1 = proper_case()
+print(result1)
 
 # my_word = "hello andy"
 # #this returns each letter
@@ -75,6 +76,28 @@ def compress():
   
 
 print(compress())
+
+
+# Palidrone
+
+def palidrone():
+    p_drone = ''
+    input_p_drone = input("Input a word to check for Palidrone: ")
+    p_drone + input_p_drone
+    for letter in range(0, int(len(input_p_drone)/2)):
+        if input_p_drone[letter] != input_p_drone[len(input_p_drone)-letter-1]:
+            return False
+
+    return True
+
+
+yep = palidrone()
+
+if (yep):
+    print("Yes")
+else:
+    print ("No")
+
 
 
 
